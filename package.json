@@ -10,6 +10,7 @@
     "react-scripts": "1.1.4",
     "throttle-debounce": "^1.0.1"
   },
+  "homepage": "https://chesla.github.io/starwar/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
