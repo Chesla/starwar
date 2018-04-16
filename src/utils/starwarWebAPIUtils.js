@@ -10,9 +10,9 @@ export function _checkSearch(query,type,inputValue){
     if(time===1){
         counter=0;
     }
-    if(counter>=5 && userName==='Luke Skywalker' && type==='planet'){
+    if(counter>=15 && userName==='Luke Skywalker' && type==='planet'){
         search = true;
-    }else if(counter<5 && type==='planet'){
+    }else if(counter<15 && type==='planet'){
         search = true;
     }else if(type!=='planet'){
          search = true;

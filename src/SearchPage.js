@@ -54,11 +54,25 @@ class SearchPage extends Component {
     }
     getPlanets(){
         let {planets} = this.state;
+        let prevPopluation = 0;
+        let index = 0;
+        let fontInc = 0;
         return planets.map((p,i)=>{
+            let presentPopulation = p.population==="unknown" ? 0 : parseInt(p.population);
+            if(i==0){
+                prevPopluation=p.population==="unknown" ? 0 : parseInt(p.population)
+            }else{
+                if(presentPopulation==prevPopluation){
+                    fontInc = fontInc;
+                }else{
+                    fontInc++;
+                }
+                prevPopluation=presentPopulation;
+            }
             return ( <div className="planetItem"
                             key={p.name} 
-                            style={{fontSize:`${12+i}px`}}>
-                        {p.name}
+                            style={{fontSize:`${12+fontInc}px`}}>
+                        {p.name},{presentPopulation}
                     </div>
             )
         })
