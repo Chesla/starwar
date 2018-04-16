@@ -22,6 +22,9 @@ class App extends Component {
     componentWillUnmount(){
          StarwarStores.removeListener('change',this._getstarwarstores);
     }
+    componentDidMount(){
+        sessionStorage.clear();
+    }
     checkSubmit(){
         let {userName,password}=this.state;
         if(userName==='' || password===''){
