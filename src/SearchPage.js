@@ -72,7 +72,7 @@ class SearchPage extends Component {
             return ( <div className="planetItem"
                             key={p.name} 
                             style={{fontSize:`${12+fontInc}px`}}>
-                        {p.name},{presentPopulation}
+                        {p.name}
                     </div>
             )
         })
